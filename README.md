@@ -1,4 +1,4 @@
-# ExecutorCompletionSvcWithFlowControl
+# Executor Completion Service With Flow Control
 
 ## Introduction
 `ExecutorCompletionService` introduced in Java 8 is an excellent way to run batch jobs on several million work items with configurable concurrency. It provides:
