@@ -39,7 +39,7 @@ class ExecutorCompletionSvcWithFlowControl<T, U> {
 ```
 
 * The `process(..)` method pulls items from the `requestStream`, processes it using `processor`, and is consumed by the `resultCconsumer`.
-`process(..)` returns when all items have been processed (or errored out). 
+`process(..)` returns when all items have been processed (or error'd out). 
 This mechanism also ensures that flow control is provided not just at the inbound side but at the outbound side as well.
 
 * The code has been tested for work items of different sizes, different Q depths, different inbound, processing, and outbound rates, either executor thread enqueuer or dequeuer started first.
