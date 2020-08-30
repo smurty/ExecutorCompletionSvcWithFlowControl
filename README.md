@@ -14,7 +14,7 @@ This could result in memory overruns further compounded if request or response p
 Flow Control is inserted in between the service requester and the `ExecutorCompletionService`. The flow control is not a rate limiter or a throttler.
 
 ## Design
-(insert pic here)
+![schematic](https://github.com/smurty/ExecutorCompletionSvcWithFlowControl/blob/master/ExecutorCompletionSvcWithFlowControl.png?raw=true)
 
 ### Flow control uses the following elements:
 * one executor thread to enqueue work on the work queue (`enqueue(..)`)
