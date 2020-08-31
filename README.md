@@ -6,7 +6,6 @@
 * worker thread pool to perform work
 * Unbounded completion queue to collect processed work
 
-## What problem does it solve?
 While this may suffice for many use cases, this model lacks flow control, for both inbound and outbound queues. 
 The work queue, or completion queue depth can become very large depending on which is faster, the enqueuing side, or dequeuing side respectively. This could result in memory overruns further compounded if request or response payloads are large. Stack exchange has programmers who have been bitten by this.
 
@@ -27,7 +26,7 @@ Flow Control is inserted in between the service requester and the ExecutorComple
 
 
 ## Implementation
-It is a generic implementation with your choice of:
+It is a generic implementation with user provided:
 * input and output payload classes (type parameters), 
 * A callback Function that processes a request item into a processed item.
 * A consumer to receive processed items
